@@ -1,1 +1,762 @@
-hello world!
+<!-- 檔名：index.html -->
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Search Console 驗證標記 -->
+  <meta name="google-site-verification" content="6Uxl2i94gGi0I8xIX6JmmKKnT-TOkYHXpIr4OgJCgGM" />
+  
+  <title>Freya Lin｜20年護理長・專攻代謝症候群與體態管理顧問</title>
+  <meta name="description" content="前 20 年護理長 Freya Lin，專攻代謝症候群與體態管理。結合全營養彈性熱量飲食法與日常習慣指導，陪伴女性找回健康曲線與自信，啟動人生逆齡蛻變。" />
+  <meta name="keywords" content="代謝症候群, 體態管理, 女力蛻變, 全營養彈性熱量飲食法, Freya Lin, 護理長健康顧問, 改變方程式" />
+  <link rel="canonical" href="https://teamflying2019.github.io/" />
+
+  <!-- Open Graph / 社群分享標籤 -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://teamflying2019.github.io/" />
+  <meta property="og:title" content="Freya Lin｜20年護理長・專攻代謝症候群與體態管理顧問" />
+  <meta property="og:description" content="把健康變成方法，把改變變成人生。以 20 年護理專業陪伴你找回健康、理想體態與自信。" />
+  <meta property="og:image" content="https://teamflying2019.github.io/share.jpg" />
+
+  <!-- Favicon (Emoji) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💜</text></svg>">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#faf5ff',
+              100: '#f3e8ff',
+              200: '#e9d5ff',
+              300: '#d8b4fe',
+              400: '#c084fc',
+              500: '#a855f7',
+              600: '#9333ea',
+              700: '#7e22ce',
+              800: '#6b21a8',
+              900: '#581c87',
+              950: '#3b0764',
+            }
+          },
+          fontFamily: {
+            serif: ['"Noto Serif TC"', 'Georgia', 'serif'],
+            sans: ['"Noto Sans TC"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Noto Serif TC & Noto Sans TC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    h1, h2, h3, .font-heading {
+      font-family: 'Noto Serif TC', serif;
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(88, 28, 135, 0.92) 0%, rgba(126, 34, 206, 0.85) 50%, rgba(168, 85, 247, 0.75) 100%);
+    }
+    .dark .hero-gradient {
+      background: linear-gradient(135deg, rgba(30, 10, 50, 0.95) 0%, rgba(59, 7, 100, 0.9) 50%, rgba(88, 28, 135, 0.85) 100%);
+    }
+  </style>
+
+  <!-- JSON-LD 結構化資料 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Freya Lin",
+    "alternateName": "Freya",
+    "jobTitle": "專攻代謝症候群護理長健康顧問",
+    "description": "以 20 年護理專業為基礎，結合全營養彈性熱量飲食法與日常習慣管理，陪伴找回代謝健康、理想體態與自信。",
+    "url": "https://teamflying2019.github.io/",
+    "sameAs": [
+      "https://www.facebook.com/teamflying2019/",
+      "https://www.instagram.com/teamflying2019/",
+      "https://www.youtube.com/@teamflying2019"
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-stone-50 text-stone-800 dark:bg-stone-950 dark:text-stone-100 transition-colors duration-300 antialiased selection:bg-brand-200 selection:text-brand-900">
+
+  <!-- 導覽列 Header -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md border-b border-stone-200/60 dark:border-stone-800/60 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
+      <a href="#hero" class="text-xl sm:text-2xl font-bold tracking-tight text-brand-800 dark:text-brand-300 font-heading">
+        Freya Lin
+      </a>
+
+      <!-- 電腦版選單 -->
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-stone-600 dark:text-stone-300">
+        <a href="#about" class="hover:text-brand-700 dark:hover:text-brand-400 transition-colors">關於我</a>
+        <a href="#transformation" class="hover:text-brand-700 dark:hover:text-brand-400 transition-colors">98天蛻變</a>
+        <a href="#expertise" class="hover:text-brand-700 dark:hover:text-brand-400 transition-colors">專業領域</a>
+        <a href="#services" class="hover:text-brand-700 dark:hover:text-brand-400 transition-colors">健康管理服務</a>
+        <a href="#empowerment" class="hover:text-brand-700 dark:hover:text-brand-400 transition-colors">女力成長</a>
+        <a href="#podcast" class="hover:text-brand-700 dark:hover:text-brand-400 transition-colors">影音與播客</a>
+        <a href="#knowledge" class="hover:text-brand-700 dark:hover:text-brand-400 transition-colors">知識專區</a>
+      </nav>
+
+      <div class="flex items-center space-x-3">
+        <!-- 深淺色切換按鈕 -->
+        <button id="theme-toggle" aria-label="切換深淺色模式" class="p-2 rounded-full text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 focus:outline-none transition-colors">
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="hidden sm:inline-flex items-center px-4 py-2 text-sm font-medium rounded-full text-white bg-brand-700 hover:bg-brand-800 transition-colors shadow-sm">
+          預約諮詢
+        </a>
+
+        <!-- 手機漢堡選單按鈕 -->
+        <button id="mobile-menu-btn" aria-label="開啟選單" class="md:hidden p-2 rounded-lg text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- 手機版選單展開 -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 space-y-2 bg-white dark:bg-stone-900 border-b border-stone-200 dark:border-stone-800">
+      <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-stone-700 dark:text-stone-200 hover:bg-brand-50 dark:hover:bg-brand-950">關於我</a>
+      <a href="#transformation" class="block px-3 py-2 rounded-md text-base font-medium text-stone-700 dark:text-stone-200 hover:bg-brand-50 dark:hover:bg-brand-950">98天蛻變</a>
+      <a href="#expertise" class="block px-3 py-2 rounded-md text-base font-medium text-stone-700 dark:text-stone-200 hover:bg-brand-50 dark:hover:bg-brand-950">專業領域</a>
+      <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-stone-700 dark:text-stone-200 hover:bg-brand-50 dark:hover:bg-brand-950">健康管理服務</a>
+      <a href="#empowerment" class="block px-3 py-2 rounded-md text-base font-medium text-stone-700 dark:text-stone-200 hover:bg-brand-50 dark:hover:bg-brand-950">女力成長</a>
+      <a href="#podcast" class="block px-3 py-2 rounded-md text-base font-medium text-stone-700 dark:text-stone-200 hover:bg-brand-50 dark:hover:bg-brand-950">影音與播客</a>
+      <a href="#knowledge" class="block px-3 py-2 rounded-md text-base font-medium text-stone-700 dark:text-stone-200 hover:bg-brand-50 dark:hover:bg-brand-950">專業知識區</a>
+      <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-brand-700 dark:text-brand-300 font-bold">聯絡 Freya</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. 開場 Hero（D 大字滿版型） -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      <!-- 背景底圖與漸層遮罩 -->
+      <div class="absolute inset-0 -z-10">
+        <img 
+          src="hero.jpg" 
+          alt="Freya Lin 健康顧問氛圍背景" 
+          loading="lazy" 
+          onerror="this.onerror=null;this.src='https://picsum.photos/seed/purplemindful/1920/1080';"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 hero-gradient"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-6 py-24 text-center text-white relative z-10">
+        <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-xs sm:text-sm tracking-widest uppercase mb-6 font-medium">
+          專攻代謝症候群護理長健康顧問 ‧ 全球全區線上陪伴
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight sm:leading-tight mb-8 font-heading tracking-tight drop-shadow-sm">
+          把健康變成方法，<br class="hidden sm:inline" />把改變變成人生。
+        </h1>
+
+        <div class="flex items-center justify-center gap-3 text-sm sm:text-base font-medium text-purple-100 tracking-wider mb-8">
+          <span>專攻代謝症候群</span>
+          <span>•</span>
+          <span>體態管理</span>
+          <span>•</span>
+          <span>女力蛻變</span>
+        </div>
+
+        <p class="text-base sm:text-xl text-purple-50 max-w-2xl mx-auto leading-relaxed mb-10 font-light">
+          以 20 年護理專業為基礎，結合營養與代謝管理，陪伴你找回健康、理想體態與自信，讓改變成為更美好的人生。
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://docs.google.com/forms/d/1JS7R1HSiluW44iAJ5bXFaYS4IX5MyYV72bEa_T-VW1o/viewform" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-3.5 rounded-full text-base font-semibold text-brand-900 bg-white hover:bg-stone-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            💌 預約健康諮詢
+          </a>
+          <a href="#about" class="w-full sm:w-auto px-8 py-3.5 rounded-full text-base font-semibold text-white bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 transition-all duration-300">
+            🌹 認識 Freya
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 關於我（About Section） -->
+    <section id="about" class="py-24 px-6 max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-brand-600 dark:text-brand-400 font-semibold tracking-widest text-sm uppercase">About Freya</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mt-2 text-stone-900 dark:text-stone-50">20年護理長到健康創業家</h2>
+        <div class="w-12 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- 個人形象照 -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative group w-full max-w-sm">
+            <div class="absolute -inset-2 bg-gradient-to-r from-brand-300 to-purple-400 rounded-3xl blur-lg opacity-40 group-hover:opacity-60 transition duration-500"></div>
+            <img 
+              src="photo.jpg" 
+              alt="Freya Lin - 專攻代謝症候群護理長健康顧問" 
+              loading="lazy" 
+              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=800&q=80';"
+              class="relative rounded-2xl w-full h-[500px] object-cover object-center shadow-2xl border border-stone-100 dark:border-stone-800"
+            />
+          </div>
+        </div>
+
+        <!-- 說明文字 -->
+        <div class="lg:col-span-7 space-y-6 text-stone-600 dark:text-stone-300 text-base leading-relaxed">
+          <div class="bg-brand-50/60 dark:bg-brand-950/40 p-6 rounded-2xl border border-brand-100/60 dark:border-brand-900/40">
+            <h3 class="text-xl font-bold text-brand-900 dark:text-brand-200 mb-2 font-heading">
+              以醫護科學為本，落實健康生活實踐
+            </h3>
+            <p>
+              目前是一位健康管理顧問與創業家，擁有 20 年護理專業背景，專注於代謝健康、營養管理與體態管理。透過全營養彈性熱量飲食法（CNFCD）、營養知識與生活習慣管理，陪伴想改善健康、管理體態的人，建立適合自己的健康生活方式。
+            </p>
+          </div>
+
+          <p>
+            除了服務個人客戶，我也致力於培育健康管理顧問、建立團隊，讓更多人有機會透過健康創造價值，實現自我成長。
+          </p>
+
+          <div class="border-l-4 border-brand-600 pl-4 py-1 italic text-stone-800 dark:text-stone-200 font-medium">
+            「我最在乎的是『專業、誠信與陪伴』。健康管理不能只看體重數字，更不能追求短期成果。比起告訴別人應該怎麼做，我更重視讓對方理解背後的原因，學會正確的方法，真正落實在生活中。」
+          </div>
+
+          <p>
+            脫下護理角色，我熱愛旅行、接觸不同文化，喜愛研究新工具與能提高生活工作效率的 AI 應用。近年經營自媒體與 Podcast《改變方程式》，期待把健康知識變得更親近生活。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 我的蛻變（Transformation） -->
+    <section id="transformation" class="py-24 bg-brand-50/50 dark:bg-stone-900/50 border-y border-stone-200/50 dark:border-stone-800/50">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-brand-600 dark:text-brand-400 font-semibold tracking-widest text-sm uppercase">Personal Journey</span>
+          <h2 class="text-3xl sm:text-4xl font-bold mt-2 text-stone-900 dark:text-stone-50">98天逆齡蛻變故事</h2>
+          <p class="text-stone-500 dark:text-stone-400 mt-3 text-base">改變從來不嫌晚，52 歲依然有重新選擇的機會與底氣。</p>
+          <div class="w-12 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="bg-white dark:bg-stone-800/80 rounded-3xl p-8 sm:p-12 shadow-xl border border-stone-100 dark:border-stone-700">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
+            <div class="space-y-4 text-stone-600 dark:text-stone-300 leading-relaxed">
+              <p>
+                曾經，我有 20 年的護理工作經歷，也曾是一位不太需要煩惱體重的瘦子。沒想到，人生在不知不覺中改變了——<strong>15 年間，體重增加了 23 公斤</strong>。
+              </p>
+              <p>
+                從穿衣服開始有了限制，到照鏡子時不再那麼喜歡自己的模樣，我才真正體會到，身體的改變往往不是一夕之間，而是長期生活習慣累積的結果。
+              </p>
+              <p>
+                身為護理人員，我看過無數疾病，深知健康的重要。但當健康危機真正發生在自己身上時，才更懂得預防與日常管理的深遠意義。
+              </p>
+            </div>
+
+            <div class="bg-stone-100 dark:bg-stone-900 rounded-2xl p-6 border border-brand-200/50 dark:border-brand-900/50 flex flex-col justify-center">
+              <div class="text-center py-4">
+                <span class="text-xs uppercase tracking-wider text-brand-600 dark:text-brand-400 font-bold">真實實踐紀錄</span>
+                <div class="text-4xl sm:text-5xl font-extrabold text-brand-700 dark:text-brand-300 mt-2 font-heading">
+                  98 天 ‧ 17 公斤
+                </div>
+                <p class="text-stone-600 dark:text-stone-400 mt-2 text-sm font-medium">重回理想體態與輕盈健康的逆齡見證</p>
+              </div>
+              <div class="mt-4 pt-4 border-t border-stone-200 dark:border-stone-800 text-xs text-stone-500 dark:text-stone-400 leading-relaxed text-center">
+                不靠偏方、不盲目挨餓，以全營養與代謝修復為核心的科學蛻變歷程。
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-stone-100 dark:border-stone-700 text-stone-700 dark:text-stone-200 font-serif text-lg leading-relaxed text-center italic">
+            「女人的精彩，不會因為年齡而停止；只要願意開始，人生永遠有重新選擇的機會。」
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 專業領域（Expertise） -->
+    <section id="expertise" class="py-24 px-6 max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-brand-600 dark:text-brand-400 font-semibold tracking-widest text-sm uppercase">Core Capabilities</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mt-2 text-stone-900 dark:text-stone-50">代謝健康與體態管理專長</h2>
+        <div class="w-12 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- 技能卡片 1 -->
+        <div class="p-8 rounded-2xl bg-white dark:bg-stone-800/90 border border-stone-200/70 dark:border-stone-700 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 dark:bg-brand-900/60 text-brand-700 dark:text-brand-300 flex items-center justify-center text-2xl mb-5">
+            🩺
+          </div>
+          <h3 class="text-xl font-bold text-stone-900 dark:text-stone-100 mb-2">代謝健康管理</h3>
+          <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+            結合臨床護理專業與實證指標，從根源檢視與調理身體機能，協助掌握代謝關鍵。
+          </p>
+        </div>
+
+        <!-- 技能卡片 2 -->
+        <div class="p-8 rounded-2xl bg-white dark:bg-stone-800/90 border border-stone-200/70 dark:border-stone-700 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 dark:bg-brand-900/60 text-brand-700 dark:text-brand-300 flex items-center justify-center text-2xl mb-5">
+            🥗
+          </div>
+          <h3 class="text-xl font-bold text-stone-900 dark:text-stone-100 mb-2">營養與飲食管理</h3>
+          <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+            全營養彈性熱量飲食法（CNFCD），擺脫極端飲食限制，吃得豐盛且健康無負擔。
+          </p>
+        </div>
+
+        <!-- 技能卡片 3 -->
+        <div class="p-8 rounded-2xl bg-white dark:bg-stone-800/90 border border-stone-200/70 dark:border-stone-700 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 dark:bg-brand-900/60 text-brand-700 dark:text-brand-300 flex items-center justify-center text-2xl mb-5">
+            ⚖️
+          </div>
+          <h3 class="text-xl font-bold text-stone-900 dark:text-stone-100 mb-2">體態與體組成管理</h3>
+          <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+            重視脂肪、骨骼肌與體水分的真實比例，回歸線條平衡與精神活力，不盲信體重機。
+          </p>
+        </div>
+
+        <!-- 技能卡片 4 -->
+        <div class="p-8 rounded-2xl bg-white dark:bg-stone-800/90 border border-stone-200/70 dark:border-stone-700 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 dark:bg-brand-900/60 text-brand-700 dark:text-brand-300 flex items-center justify-center text-2xl mb-5">
+            🎓
+          </div>
+          <h3 class="text-xl font-bold text-stone-900 dark:text-stone-100 mb-2">健康教育與專業培訓</h3>
+          <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+            將專業醫護衛教化繁為簡，建立每個人都能輕鬆聽懂、落實在生活中的自主健康力。
+          </p>
+        </div>
+
+        <!-- 技能卡片 5 -->
+        <div class="p-8 rounded-2xl bg-white dark:bg-stone-800/90 border border-stone-200/70 dark:border-stone-700 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 dark:bg-brand-900/60 text-brand-700 dark:text-brand-300 flex items-center justify-center text-2xl mb-5">
+            🤝
+          </div>
+          <h3 class="text-xl font-bold text-stone-900 dark:text-stone-100 mb-2">團隊領導與人才培育</h3>
+          <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+            培育健康管理顧問團隊，建立健全互助的陪伴系統，帶領夥伴拓展健康事業新版圖。
+          </p>
+        </div>
+
+        <!-- 技能卡片 6 -->
+        <div class="p-8 rounded-2xl bg-white dark:bg-stone-800/90 border border-stone-200/70 dark:border-stone-700 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 dark:bg-brand-900/60 text-brand-700 dark:text-brand-300 flex items-center justify-center text-2xl mb-5">
+            🎙️
+          </div>
+          <h3 class="text-xl font-bold text-stone-900 dark:text-stone-100 mb-2">個人品牌與自媒體經營</h3>
+          <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+            透過 Podcast《改變方程式》與多媒體影音傳播實證觀念，擴大正向的健康影響力。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 健康管理服務（Services） -->
+    <section id="services" class="py-24 bg-stone-100/60 dark:bg-stone-900/70">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-brand-600 dark:text-brand-400 font-semibold tracking-widest text-sm uppercase">Services</span>
+          <h2 class="text-3xl sm:text-4xl font-bold mt-2 text-stone-900 dark:text-stone-50">陪你找回健康與自信</h2>
+          <p class="text-stone-500 dark:text-stone-400 mt-3 text-base">一對一線上健康陪伴，為你量身打造適合長久運行的生活型態。</p>
+          <div class="w-12 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white dark:bg-stone-800 p-8 rounded-2xl shadow-sm border border-stone-200/70 dark:border-stone-700 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400">Step 1</span>
+              <h3 class="text-xl font-bold text-stone-900 dark:text-stone-100 mt-2 mb-4">全面健康評估</h3>
+              <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                以 20 年護理專業視角，深入解析日常作息、代謝盲點與體況瓶頸，找回身體問題的根本核心。
+              </p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-stone-100 dark:border-stone-700/60 text-xs text-stone-400">專業科學分析</div>
+          </div>
+
+          <div class="bg-white dark:bg-stone-800 p-8 rounded-2xl shadow-sm border border-stone-200/70 dark:border-stone-700 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400">Step 2</span>
+              <h3 class="text-xl font-bold text-stone-900 dark:text-stone-100 mt-2 mb-4">彈性飲食與習慣建立</h3>
+              <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                落實全營養彈性熱量飲食法（CNFCD），規劃符合家庭與工作生活節奏的日常餐盤，拒絕挨餓反彈。
+              </p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-stone-100 dark:border-stone-700/60 text-xs text-stone-400">可持續性方案</div>
+          </div>
+
+          <div class="bg-white dark:bg-stone-800 p-8 rounded-2xl shadow-sm border border-stone-200/70 dark:border-stone-700 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400">Step 3</span>
+              <h3 class="text-xl font-bold text-stone-900 dark:text-stone-100 mt-2 mb-4">溫暖支持與陪伴</h3>
+              <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                改變需要同行者。在面對心態動搖或聚餐應酬時，給予即時策略指引與鼓勵，陪你穩健看見成果。
+              </p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-stone-100 dark:border-stone-700/60 text-xs text-stone-400">長效溫暖同行</div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="https://docs.google.com/forms/d/1JS7R1HSiluW44iAJ5bXFaYS4IX5MyYV72bEa_T-VW1o/viewform" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-8 py-3.5 rounded-full text-base font-semibold text-white bg-brand-700 hover:bg-brand-800 transition-colors shadow-md">
+            💌 立即預約一對一健康諮詢
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. 女力成長（Empowerment） -->
+    <section id="empowerment" class="py-24 px-6 max-w-5xl mx-auto">
+      <div class="relative bg-gradient-to-br from-brand-900 to-purple-950 text-white rounded-3xl p-8 sm:p-14 overflow-hidden shadow-2xl">
+        <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-2xl">
+          <span class="text-brand-300 font-semibold tracking-widest text-xs uppercase">Women Empowerment</span>
+          <h2 class="text-3xl sm:text-4xl font-bold mt-2 font-heading leading-tight">
+            女性自信、成長與創業
+          </h2>
+          <p class="mt-6 text-purple-100 text-base sm:text-lg leading-relaxed">
+            健康是一切自信的基礎。當你重新拿回身體的主控權，也會擁有突破自我設限的勇氣。除了個人體態管理，我更致力於培育女性健康管理顧問，透過有系統的專業訓練與實踐陪伴，支持更多女性走出自己的事業道路，活出獨立自主的光彩。
+          </p>
+          <div class="mt-8">
+            <a href="#contact" class="inline-flex items-center px-6 py-3 rounded-full text-sm font-semibold bg-white text-brand-950 hover:bg-purple-50 transition-colors shadow-md">
+              ✨ 探索團隊合作與培訓機會
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. 影音與 Podcast（Media & Podcast） -->
+    <section id="podcast" class="py-24 bg-stone-100/40 dark:bg-stone-900/40 border-t border-stone-200/50 dark:border-stone-800/50">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-brand-600 dark:text-brand-400 font-semibold tracking-widest text-sm uppercase">Podcast & Media</span>
+          <h2 class="text-3xl sm:text-4xl font-bold mt-2 text-stone-900 dark:text-stone-50">改變方程式</h2>
+          <p class="text-stone-500 dark:text-stone-400 mt-3 text-base">透過文字、影像與聲音，把複雜的健康與代謝知識變得容易理解。</p>
+          <div class="w-12 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <!-- 影音卡片（具備跳出視窗互動） -->
+          <div class="bg-white dark:bg-stone-800 rounded-2xl overflow-hidden shadow-sm border border-stone-200/70 dark:border-stone-700 group">
+            <div class="relative overflow-hidden cursor-pointer" onclick="openModal('改變方程式 Podcast', '結合臨床護理長經驗，用溫暖輕鬆的對話解答常見代謝問題，陪伴每位聽眾打造持續改變的日常動力。')">
+              <img 
+                src="work1.jpg" 
+                alt="改變方程式 Podcast 節目封面" 
+                loading="lazy" 
+                onerror="this.onerror=null;this.src='https://picsum.photos/seed/podcastcover/800/500';"
+                class="w-full h-56 object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div class="absolute inset-0 bg-brand-900/30 group-hover:bg-brand-900/10 transition-colors flex items-center justify-center">
+                <span class="w-14 h-14 rounded-full bg-white/90 text-brand-700 flex items-center justify-center text-xl shadow-lg pl-1">▶</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-stone-400 mb-2">
+                <span>音頻與影像專欄</span>
+                <span>點擊查看詳情</span>
+              </div>
+              <h3 class="text-lg font-bold text-stone-900 dark:text-stone-100 mb-2">
+                《改變方程式》Podcast 官方頻道
+              </h3>
+              <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-4">
+                打破醫學與日常生活的隔閡，分享最真實的減重新知與心態調整方法。
+              </p>
+              <a href="https://www.youtube.com/@teamflying2019" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline">
+                前往 YouTube 頻道收看 ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- 自媒體社群卡片 -->
+          <div class="bg-white dark:bg-stone-800 rounded-2xl overflow-hidden shadow-sm border border-stone-200/70 dark:border-stone-700 group">
+            <div class="relative overflow-hidden cursor-pointer" onclick="openModal('自媒體與社群日常', '在 Facebook 與 Instagram 持續分享真實飲食實踐、生活習慣引導與女性成長隨筆，歡迎加入社群一起交流。')">
+              <img 
+                src="work2.jpg" 
+                alt="Freya 自媒體內容預覽" 
+                loading="lazy" 
+                onerror="this.onerror=null;this.src='https://picsum.photos/seed/freyahealth/800/500';"
+                class="w-full h-56 object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div class="absolute inset-0 bg-brand-900/30 group-hover:bg-brand-900/10 transition-colors flex items-center justify-center">
+                <span class="w-14 h-14 rounded-full bg-white/90 text-brand-700 flex items-center justify-center text-xl shadow-lg">📸</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-stone-400 mb-2">
+                <span>社群專題分享</span>
+                <span>點擊查看詳情</span>
+              </div>
+              <h3 class="text-lg font-bold text-stone-900 dark:text-stone-100 mb-2">
+                日常健康衛教與自媒體互動
+              </h3>
+              <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-4">
+                每週更新日常餐盤原則、外食避雷要點與體態保持的生活小撇步。
+              </p>
+              <a href="https://www.instagram.com/teamflying2019/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline">
+                追蹤 Instagram ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 成功故事（Testimonials 預留） -->
+    <section id="stories" class="py-24 px-6 max-w-5xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-brand-600 dark:text-brand-400 font-semibold tracking-widest text-sm uppercase">Success Stories</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mt-2 text-stone-900 dark:text-stone-50">真實改變與見證</h2>
+        <p class="text-stone-500 dark:text-stone-400 mt-3 text-base">每一步的堅持，都在見證身體與心態的奇蹟甦醒。</p>
+        <div class="w-12 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white dark:bg-stone-800 p-8 rounded-2xl shadow-sm border border-stone-200/80 dark:border-stone-700 relative">
+          <div class="text-brand-300 dark:text-brand-800 text-6xl font-serif absolute top-4 right-6 select-none opacity-40">“</div>
+          <p class="text-stone-600 dark:text-stone-300 text-sm sm:text-base leading-relaxed relative z-10 mb-6">
+            「健康不是短期節食的折磨，而是真正看懂身體需要什麼。在 Freya 的專業帶領下，我才明白原來健康飲食可以如此自在富足。」
+          </p>
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-full bg-brand-100 dark:bg-brand-900 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold text-sm">
+              學
+            </div>
+            <div>
+              <div class="font-bold text-stone-800 dark:text-stone-100 text-sm">體態管理學員</div>
+              <div class="text-xs text-stone-400">生活習慣與代謝調理夥伴</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-stone-800 p-8 rounded-2xl shadow-sm border border-stone-200/80 dark:border-stone-700 relative">
+          <div class="text-brand-300 dark:text-brand-800 text-6xl font-serif absolute top-4 right-6 select-none opacity-40">“</div>
+          <p class="text-stone-600 dark:text-stone-300 text-sm sm:text-base leading-relaxed relative z-10 mb-6">
+            「Freya 護理長的溫暖與嚴謹，讓我在減脂過程中從不感到孤單。這不僅改變了我的身型，更讓我重拾對日常的自信與掌控感。」
+          </p>
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-full bg-brand-100 dark:bg-brand-900 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold text-sm">
+              夥
+            </div>
+            <div>
+              <div class="font-bold text-stone-800 dark:text-stone-100 text-sm">健康顧問夥伴</div>
+              <div class="text-xs text-stone-400">團隊培育學員</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. 專業知識專區（AEO / SEO 知識庫入口） -->
+    <section id="knowledge" class="py-24 bg-brand-50/40 dark:bg-stone-900/60 border-t border-stone-200/60 dark:border-stone-800/60">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-brand-600 dark:text-brand-400 font-semibold tracking-widest text-sm uppercase">Knowledge Base</span>
+          <h2 class="text-3xl sm:text-4xl font-bold mt-2 text-stone-900 dark:text-stone-50">代謝健康知識專區</h2>
+          <p class="text-stone-500 dark:text-stone-400 mt-3 text-base">解答最常見的代謝健康與體態迷思，用實證觀念打底。</p>
+          <div class="w-12 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- 知識文章卡片 1 -->
+          <article class="bg-white dark:bg-stone-800 rounded-2xl p-8 border border-stone-200/70 dark:border-stone-700 shadow-sm flex flex-col justify-between">
+            <div>
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 dark:bg-brand-900 text-brand-700 dark:text-brand-300 mb-4">代謝調控</span>
+              <h3 class="text-xl font-bold text-stone-900 dark:text-stone-100 mb-3">
+                如何從日常飲食改善代謝症候群的關鍵指標？
+              </h3>
+              <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-6">
+                代謝症候群不只是數字問題，更是身體長期發炎的訊號。透過全營養彈性熱量飲食法（CNFCD），調整餐盤比例，讓身體重新啟動燃燒機能。
+              </p>
+            </div>
+            <a href="article-metabolism-guide.html" class="inline-flex items-center text-sm font-bold text-brand-700 dark:text-brand-400 hover:text-brand-800">
+              閱讀專文說明 →
+            </a>
+          </article>
+
+          <!-- 知識文章卡片 2 -->
+          <article class="bg-white dark:bg-stone-800 rounded-2xl p-8 border border-stone-200/70 dark:border-stone-700 shadow-sm flex flex-col justify-between">
+            <div>
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 dark:bg-brand-900 text-brand-700 dark:text-brand-300 mb-4">減脂心法</span>
+              <h3 class="text-xl font-bold text-stone-900 dark:text-stone-100 mb-3">
+                節食容易反彈？為什麼「彈性熱量」能維持長久體態？
+              </h3>
+              <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-6">
+                極端限制熱量只會降低基礎代謝率。學會看懂營養素密度，不必餓肚子也能在日常生活中維持輕盈與體脂平衡。
+              </p>
+            </div>
+            <a href="article-flexible-diet.html" class="inline-flex items-center text-sm font-bold text-brand-700 dark:text-brand-400 hover:text-brand-800">
+              閱讀專文說明 →
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. 聯絡 Freya（Contact Section） -->
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto text-center">
+      <span class="text-brand-600 dark:text-brand-400 font-semibold tracking-widest text-sm uppercase">Get In Touch</span>
+      <h2 class="text-3xl sm:text-5xl font-extrabold mt-2 mb-4 text-stone-900 dark:text-stone-50 font-heading">
+        每一個改變，都從勇敢踏出第一步開始。
+      </h2>
+      <p class="text-base sm:text-lg text-stone-600 dark:text-stone-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+        不論妳想找回健康、重塑體態、活出女力，或開啟事業新篇章，Freya 都期待與妳相遇。
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+        <a href="https://docs.google.com/forms/d/1JS7R1HSiluW44iAJ5bXFaYS4IX5MyYV72bEa_T-VW1o/viewform" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-3.5 rounded-full text-base font-semibold text-white bg-brand-700 hover:bg-brand-800 shadow-md hover:shadow-lg transition-all">
+          💌 預約健康諮詢
+        </a>
+        <a href="#about" class="w-full sm:w-auto px-8 py-3.5 rounded-full text-base font-semibold text-brand-800 dark:text-brand-200 bg-brand-100 dark:bg-brand-900/50 hover:bg-brand-200 transition-colors">
+          🌹 認識 Freya
+        </a>
+        <a href="mailto:freya0723@gmail.com?subject=探索合作機會洽詢" class="w-full sm:w-auto px-8 py-3.5 rounded-full text-base font-semibold text-stone-700 dark:text-stone-200 bg-stone-100 dark:bg-stone-800 hover:bg-stone-200 dark:hover:bg-stone-700 transition-colors">
+          ✨ 探索合作機會
+        </a>
+      </div>
+
+      <!-- 社群連結 -->
+      <div class="border-t border-stone-200 dark:border-stone-800 pt-10">
+        <div class="text-sm text-stone-500 dark:text-stone-400 mb-6 font-medium">歡迎在社群上關注與交流日常</div>
+        <div class="flex items-center justify-center space-x-6 text-stone-600 dark:text-stone-400">
+          <a href="https://www.facebook.com/teamflying2019/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors p-2" aria-label="Facebook">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/teamflying2019/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors p-2" aria-label="Instagram">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.13-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@teamflying2019" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors p-2" aria-label="YouTube">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 頁尾 Footer -->
+  <footer class="py-8 bg-stone-900 text-stone-400 text-xs text-center border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <p>© 2026 Freya Lin. All rights reserved. 專攻代謝症候群護理長健康顧問</p>
+    </div>
+  </footer>
+
+  <!-- 互動元件 1: 作品/影音詳情彈出視窗（Modal） -->
+  <div id="detail-modal" class="fixed inset-0 z-50 hidden bg-stone-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-stone-800 rounded-3xl max-w-lg w-full p-8 shadow-2xl border border-stone-200 dark:border-stone-700 relative">
+      <button onclick="closeModal()" aria-label="關閉視窗" class="absolute top-5 right-5 text-stone-400 hover:text-stone-600 dark:hover:text-stone-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+      <h3 id="modal-title" class="text-2xl font-bold text-stone-900 dark:text-stone-100 mb-4 font-heading">標題</h3>
+      <p id="modal-desc" class="text-stone-600 dark:text-stone-300 text-base leading-relaxed mb-6">內容描述</p>
+      <div class="text-right">
+        <button onclick="closeModal()" class="px-6 py-2 rounded-full bg-brand-700 text-white text-sm font-semibold hover:bg-brand-800">
+          關閉
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 互動元件 2: 回到頂端按鈕 -->
+  <button id="back-to-top" aria-label="回到頂端" class="fixed bottom-6 right-6 z-40 p-3.5 rounded-full bg-brand-700 text-white shadow-lg hover:bg-brand-800 opacity-0 pointer-events-none transition-all duration-300 focus:outline-none">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+  </button>
+
+  <!-- JavaScript 互動功能 -->
+  <script>
+    // 1. 深淺色模式切換
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      lightIcon.classList.remove('hidden');
+    } else {
+      document.documentElement.classList.remove('dark');
+      darkIcon.classList.remove('hidden');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      darkIcon.classList.toggle('hidden');
+      lightIcon.classList.toggle('hidden');
+
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      }
+    });
+
+    // 2. 手機版選單切換
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // 3. 回到頂端按鈕
+    const backToTopBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+        backToTopBtn.classList.add('opacity-100');
+      } else {
+        backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+        backToTopBtn.classList.remove('opacity-100');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 4. 作品詳情彈出視窗（Modal）
+    function openModal(title, desc) {
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('modal-desc').innerText = desc;
+      document.getElementById('detail-modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('detail-modal').classList.add('hidden');
+    }
+
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('detail-modal');
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
